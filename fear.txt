@@ -1,4 +1,13 @@
 php artisan serve # 啟動localhost
+php artisan make:controller TodoController # 建立controller
+php artisan  make:migration create_todos_table # 在laravel專案建立php table的檔案
+php artisan migrate # 在mysql建立資料表
+php artisan make:model Todo #建立model
+
+在blade樣本提交的時候,要用csrf保護提交方式(官網可查)
 
 2018/08/14
 15:00
+
+2018/08/15
+31:00

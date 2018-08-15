@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/get值','php頁面@function名字');
+Route::get('/todo','TodoController@index');
+Route::post('/todo','TodoController@update');
+
