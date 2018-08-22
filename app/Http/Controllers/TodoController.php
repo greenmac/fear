@@ -17,8 +17,12 @@ class TodoController extends Controller
        ]);
        // view('view下面的檔案,如果有再建立一個資料夾,變成 資料夾.檔案名')
    }
+
    public function update(Request $request)
    {
+        $validated = $this->validate($request, [
+            'title' => 'required|min:3',
+        ]);
     #第一種儲存方式
     //    $todo = new Todo();
     //    $todo->title = $request->title;
@@ -30,8 +34,14 @@ class TodoController extends Controller
         // ]);
 
     #第三種儲存方式
-        $todo = Todo::create($request->all());
+        $todo = Todo::create($validated);
 
         return redirect('todo');
-   }   
+   }
+   
+   public function destroy(Request $request, Todo $todo)
+   {
+       $todo->delete();
+       return redirect('todo');
+   }
 }

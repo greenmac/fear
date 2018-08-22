@@ -18,4 +18,9 @@ Route::get('/', function () {
 // Route::get('/get值','php頁面@function名字');
 Route::get('/todo','TodoController@index');
 Route::post('/todo','TodoController@update');
+Route::delete('/todo/{todo}','TodoController@destroy');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
