@@ -17,3 +17,6 @@ php artisan make:model Todo #«Ø¥ßmodel
 
 2018/08/22
 1:05:00
+
+2018/08/23
+End
